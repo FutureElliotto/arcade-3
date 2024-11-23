@@ -1,8 +1,15 @@
-  <button onclick="openGame('./games.html')" style="background-color: transparent; border: none; padding: 15px 32px; color: white; font-size: 16px; cursor: pointer;">
-        <img src="images/vR0l+h.png" 
-        alt="Button Image" style="width: 200px; height: 100px; vertical-align: middle;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Game</title>
+</head>
+<body>
+    <button onclick="openGame('./games.html')" style="background-color: transparent; border: none; padding: 15px 32px; color: white; font-size: 16px; cursor: pointer;">
+        <img src="images/vR0l+h.png" alt="Button Image" style="width: 200px; height: 100px; vertical-align: middle;">
     </button>
-   <script>
+    <script>
         function openGame(link) {
             // Opening the window
             const win = window.open("about:blank", "_blank");

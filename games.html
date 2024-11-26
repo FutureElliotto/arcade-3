@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Fonts link moved to the head section -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Game</title>
+
     <style>
+        /* Global font setting for body */
         body {
+            font-family: "Pixelify Sans", sans-serif;
             background-image: url('images/hq720.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             text-align: center; /* Centers all content */
-            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
         }
+
+        /* Button styling */
         .game-button {
             background-color: transparent;
             border: none;
             padding: 15px;
             cursor: pointer;
         }
+
+        /* Image inside the button */
         .game-button img {
             width: 200px; 
             height: 200px;
             vertical-align: middle;
         }
+
+        /* Title styling */
         .game-title {
             color: white;
             font-size: 18px;
@@ -33,12 +45,12 @@
 </head>
 <body>
     <button onclick="window.location.href='games/driftboss.html'" class="game-button" aria-label="Drift Boss Game">
-        <img src="images/71Rvyj1gI1L.png" alt="Drift Boss Button Image">
+        <img src="images/71Rvyj1gI1L.png" alt="Drift Boss Game Button Image">
     </button>
     <p class="game-title">Drift Boss</p>
-    
+
     <button onclick="window.location.href='games/monkeymart.html'" class="game-button" aria-label="Monkey Mart Game">
-        <img src="images/1200x630wa-removebg-preview (1).png" alt="Monkey Mart Button Image">
+        <img src="images/1200x630wa-removebg-preview (1).png" alt="Monkey Mart Game Button Image">
     </button>
     <p class="game-title">Monkey Mart</p>
 </body>

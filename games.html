@@ -9,15 +9,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
 
     <style>
+        /* Consolidated body styles */
         body {
             font-family: "Pixelify Sans", sans-serif;
+            background-image: url('images/hq720.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
+            text-align: center;
             margin: 0;
             padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
         }
 
+        /* Navbar styling */
         ul {
             display: flex;
             width: 100%; 
@@ -26,7 +30,7 @@
             padding: 0;
             position: fixed;
             top: 0;
-            background-image: url('https://i.ytimg.com/vi/2HI_HD58p68/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqPOGT6B-jbfxpytbR-g53y92tSA');
+            background-image: url('images/hq720.jpg');
             background-size: cover;
             width: 100%;
             z-index: 1000;
@@ -77,17 +81,7 @@
             display: block;
         }
 
-        /* Global styling for body */
-        body {
-            font-family: "Pixelify Sans", sans-serif;
-            background-image: url('images/hq720.jpg');
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
-            margin: 0;
-        }
-
+        /* Game button styling */
         .game-button {
             background-color: transparent;
             border: none;
@@ -106,10 +100,12 @@
             font-size: 18px;
             margin-top: 10px;
         }
+
     </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <ul>
   <li><a href="#home">Home</a></li>
   <li class="dropdown">
@@ -123,6 +119,7 @@
   <li><a href="#">Settings</a></li>
 </ul>
 
+<!-- Game Buttons -->
 <button onclick="window.location.href='games/driftboss.html'" class="game-button" aria-label="Drift Boss Game">
     <img src="images/71Rvyj1gI1L.png" alt="Drift Boss Game Button Image">
 </button>

@@ -10,21 +10,36 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
+            text-align: center; /* Centers all content */
+            font-family: Arial, sans-serif;
+        }
+        .game-button {
+            background-color: transparent;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .game-button img {
+            width: 200px; 
+            height: 200px;
+            vertical-align: middle;
+        }
+        .game-title {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <button onclick="window.location.href='games/driftboss.html'"
-        style="background-color: transparent; border: none; padding: 15px 32px; color: white; font-size: 16px; cursor: pointer;">
-        <img src="images/71Rvyj1gI1L.png" 
-        alt="Button Image" style="width: 200px; height: 200px; vertical-align: middle;">
+    <button onclick="window.location.href='games/driftboss.html'" class="game-button" aria-label="Drift Boss Game">
+        <img src="images/71Rvyj1gI1L.png" alt="Drift Boss Button Image">
     </button>
-    <p>drift boss</p>
-    <button onclick="window.location.href='games/monkeymart.html'" 
-        style="background-color: transparent; border: none; padding: 15px 32px; color: white; font-size: 16px; cursor: pointer;">
-        <img src="images/1200x630wa-removebg-preview (1).png" 
-        alt="Button Image" style="width: 200px; height: 200px; vertical-align: middle;">
+    <p class="game-title">Drift Boss</p>
+    
+    <button onclick="window.location.href='games/monkeymart.html'" class="game-button" aria-label="Monkey Mart Game">
+        <img src="images/1200x630wa-removebg-preview (1).png" alt="Monkey Mart Button Image">
     </button>
-    <p>monkey mart</p>
+    <p class="game-title">Monkey Mart</p>
 </body>
 </html>

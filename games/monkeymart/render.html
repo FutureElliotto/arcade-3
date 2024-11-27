@@ -8,10 +8,11 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
 
+
     <style>
         /* Consolidated body styles */
         body {
-            font-family: "Pixelify Sans", sans-serif;
+            font-family: "Pixelify Sans", sans-serif; /* Ensure a valid font */
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -29,7 +30,7 @@
             padding: 0;
             position: fixed;
             top: 0;
-            background-image: url('hq720.jpg');
+            background-image: url('hq720.jpg'); /* Ensure the path is correct */
             background-size: cover;
             width: 100%;
             z-index: 1000;
@@ -104,12 +105,11 @@
         /* Adjust iframe to prevent overlap */
         iframe {
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 60px); /* Adjust height to ensure it fits below the navbar */
             position: absolute;
             top: 60px; /* Adjusted to give space below the fixed navbar */
             left: 0;
             right: 0;
-            bottom: 0;
             border: none;
         }
 
@@ -132,7 +132,7 @@
 </ul>
 
 <!-- Iframe containing the game -->
-<iframe src="games/monkeymart/content.html" frameborder="0"></iframe>
+<iframe src="games/monkeymart/content.html" frameborder="0" aria-label="Game Display"></iframe>
 
 </body>
 </html>

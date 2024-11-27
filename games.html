@@ -50,10 +50,11 @@
 
         li a:hover {
             font-weight: bold;
+            color: #7F00FF; /* Highlight the text color when hovered */
         }
 
         li a.active {
-            color: #7F00FF;
+            color: #7F00FF; /* Active link color */
         }
 
         .dropdown {
@@ -63,6 +64,7 @@
 
         .dropdown-content {
             display: none;
+            background-color: #000000; /* Fixed syntax error */
             position: absolute;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -107,16 +109,16 @@
 
 <!-- Navigation Bar -->
 <ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="#home" aria-label="Home">Home</a></li>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Games</a>
+    <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
     <div class="dropdown-content">
-      <a class="active" href="#">All Games</a>
-      <a href="#">Popular Games</a>
-      <a href="#">New Games</a>
+      <a class="active" href="#" aria-label="All Games">All Games</a>
+      <a href="#" aria-label="Popular Games">Popular Games</a>
+      <a href="#" aria-label="New Games">New Games</a>
     </div>
   </li>
-  <li><a href="#">Settings</a></li>
+  <li><a href="#" aria-label="Settings">Settings</a></li>
 </ul>
 
 <!-- Game Buttons -->

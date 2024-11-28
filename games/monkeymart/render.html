@@ -21,7 +21,8 @@
 
         ul {
             display: flex;
-            width: 100%; 
+            justify-content: space-around;
+            width: 100%;
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -29,7 +30,6 @@
             top: 0;
             background-image: url('https://futureelliotto.github.io/arcade-3/images/hq720.jpg');
             background-size: cover;
-            width: 100%;
             z-index: 1000;
         }
 
@@ -117,12 +117,12 @@
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn" aria-label="Games" aria-expanded="false">Games</a>
     <div class="dropdown-content">
-      <a href="#" aria-label="All Games">All Games</a>
-      <a href="#" aria-label="Popular Games">Popular Games</a>
-      <a href="#" aria-label="New Games">New Games</a>
+      <a href="games.html" aria-label="All Games">All Games</a>
+      <a href="javascript:void(0)" aria-label="Popular Games">Popular Games</a>
+      <a href="javascript:void(0)" aria-label="New Games">New Games</a>
     </div>
   </li>
-  <li><a href="#" aria-label="Settings">Settings</a></li>
+  <li><a href="javascript:void(0)" aria-label="Settings">Settings</a></li>
 </ul>
 
 <!-- Iframe containing the game -->
@@ -132,11 +132,4 @@
 <script>
     document.querySelectorAll('ul li a').forEach(link => {
         link.addEventListener('click', function() {
-            document.querySelectorAll('ul li a').forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-</script>
-
-</body>
-</html>
+            document.querySelectorAll('ul li a').fo

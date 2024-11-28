@@ -6,22 +6,19 @@
     <title>Open Game</title>
 
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
-
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 
     <style>
-        /* Consolidated body styles */
         body {
-            font-family: "Pixelify Sans", sans-serif; /* Ensure a valid font */
+            font-family: "Pixelify Sans", sans-serif;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             text-align: center;
             margin: 0;
-            padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
+            padding-top: 60px;
         }
 
-        /* Navbar styling */
         ul {
             display: flex;
             width: 100%; 
@@ -30,7 +27,7 @@
             padding: 0;
             position: fixed;
             top: 0;
-            background-image: url('./images/hq720.jpg'); /* Ensure the path is correct */
+            background-image: url('./images/hq720.jpg');
             background-size: cover;
             width: 100%;
             z-index: 1000;
@@ -53,7 +50,7 @@
         }
 
         li a.active {
-            color: #7F00FF; /* Active link color */
+            color: #7F00FF;
         }
 
         .dropdown {
@@ -63,7 +60,7 @@
 
         .dropdown-content {
             display: none;
-            background-color: #000000; /* Fixed syntax error */
+            background-color: #000000;
             position: absolute;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -82,7 +79,6 @@
             display: block;
         }
 
-        /* Game button styling */
         .game-button {
             background-color: transparent;
             border: none;
@@ -102,17 +98,15 @@
             margin-top: 10px;
         }
 
-        /* Adjust iframe to prevent overlap */
         iframe {
             width: 100%;
-            height: calc(100vh - 60px); /* Adjust height to ensure it fits below the navbar */
+            height: calc(100vh - 60px);
             position: absolute;
-            top: 60px; /* Adjusted to give space below the fixed navbar */
+            top: 60px;
             left: 0;
             right: 0;
             border: none;
         }
-
     </style>
 </head>
 <body>
@@ -121,7 +115,7 @@
 <ul>
   <li><a href="#home" aria-label="Home">Home</a></li>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" aria-label="Games">Games</a>
+    <a href="javascript:void(0)" class="dropbtn" aria-label="Games" aria-expanded="false">Games</a>
     <div class="dropdown-content">
       <a href="#" aria-label="All Games">All Games</a>
       <a href="#" aria-label="Popular Games">Popular Games</a>
@@ -133,6 +127,16 @@
 
 <!-- Iframe containing the game -->
 <iframe src="content.html" frameborder="0" aria-label="Game Display"></iframe>
+
+<!-- JavaScript to handle active link functionality -->
+<script>
+    document.querySelectorAll('ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('ul li a').forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
 
 </body>
 </html>

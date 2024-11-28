@@ -11,6 +11,7 @@
     <style>
         body {
             font-family: "Pixelify Sans", sans-serif;
+            background-image: url('https://futureelliotto.github.io/arcade-3/images/hq720.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -34,7 +35,6 @@ ul {
     position: fixed;
     top: 0;
     left: 0; /* Ensures it starts from the left edge */
-    background-image: url('https://futureelliotto.github.io/arcade-3/images/hq720.jpg');
     background-size: cover;
     z-index: 1000;
     border-bottom: none; /* Ensures no border under the navbar */
@@ -146,5 +146,6 @@ document.querySelectorAll('ul li a').forEach(link => {
     link.addEventListener('click', function() {
         document.querySelectorAll('ul li a').forEach(a => a.classList.remove('active'));
         this.classList.add('active');
+<script>
     });
 });

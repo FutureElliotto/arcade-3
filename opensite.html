@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Game</title>
+</head>
+<body>
+    <button onclick="openGame('games.html')" style="background-color: transparent; border: none; padding: 15px 32px; color: white; font-size: 16px; cursor: pointer;">
+        <img src="images/vR0l+h.png" alt="Button Image" style="width: 200px; height: 100px; vertical-align: middle;">
+    </button>
+    <script>
+        function openGame(link) {
+            // Opening the window
+            const win = window.open("about:blank", "_blank");
+
+            // Checking if the window was opened successfully
+            if (!win) {
+                alert("Popup blocked. Please allow popups.");
+                return;
+            }
+
+            // Getting the document of the new window
+            const doc = win.document;
+
+            // Changing the title of the new window
+            doc.title = "Home";
+
+            // Adding styles to the new window
+            const style = doc.createElement("style");
+            style.innerHTML = `
+                * {
+                    background: black;
+                    color: white;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                html, body {
+                    height: 100%;
+                    margin: 0;
+                }
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+            `;
+            doc.head.appendChild(style);
+
+            // Adding an iframe to the new window
+            const iframe = doc.createElement('iframe');
+            iframe.src = link; // Using the link passed to the function
+            doc.body.appendChild(iframe);
+
+            // Setting the favicon for the new tab
+            var l = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
+            l.type = 'image/x-icon';
+            l.rel = 'icon'; // Change to 'icon' from 'shortcut icon'
+            l.href = 'https://user-images.githubusercontent.com/130446887/236890346-a33ab9eb-5493-4da8-af8d-b97a3414b458.png'; // Ensure this path is correct
+            doc.head.appendChild(l);
+        }
+    </script>
+</body>
+</html>

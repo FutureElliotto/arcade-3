@@ -188,5 +188,79 @@
         </div>
     </section>
 </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var keys = [];
+        var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]; // Konami code
+
+        $(document).keydown(function(keyEvent) {
+          console.log("Key pressed: ", keyEvent.keyCode); // Debugging
+          keys.push(keyEvent.keyCode);
+
+          if (keys.length > code.length) {
+            keys.shift(); // Remove the first key if array is too long
+          }
+
+          if (keys.toString() == code.toString()) {
+            console.log("Konami code entered!"); // Debugging
+            openGame('games.html'); // Call the function to open the game
+          }
+        });
+      });
+
+      function openGame(link) {
+        console.log("Opening game..."); // Debugging
+        const win = window.open("about:blank", "_blank");
+
+        // Check if pop-up is blocked
+        if (!win) {
+          alert("Popup blocked. Please allow popups.");
+          return;
+        }
+
+        // Getting the document of the new window
+        const doc = win.document;
+
+        // Changing the title of the new window
+        doc.title = "Home";
+
+        // Adding styles to the new window
+        const style = doc.createElement("style");
+        style.innerHTML = `
+          * {
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          html, body {
+            height: 100%;
+            margin: 0;
+          }
+          iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+          }
+        `;
+        doc.head.appendChild(style);
+
+        // Adding an iframe to the new window
+        const iframe = doc.createElement('iframe');
+        iframe.src = link;
+        doc.body.appendChild(iframe);
+
+        // Setting the favicon for the new tab
+        var l = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
+        l.type = 'image/x-icon';
+        l.rel = 'icon';
+        l.href = 'https://user-images.githubusercontent.com/130446887/236890346-a33ab9eb-5493-4da8-af8d-b97a3414b458.png'; // Ensure this path is correct
+        doc.head.appendChild(l);
+      }
+    </script>
+  </head>
 </body>
 </html>

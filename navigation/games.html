@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
 <!-- Navigation Bar -->
 <ul>
@@ -26,16 +28,22 @@
   <li><a href="settings.html" aria-label="Settings">Settings</a></li>
 </ul>
 
-<!-- Game Buttons -->
-<button onclick="window.location.href='games/driftboss.html'" class="game-button" aria-label="Drift Boss Game">
-    <img src="../images/71Rvyj1gI1L.png" alt="Drift Boss Game Button Image">
-</button>
-<p class="game-title">Drift Boss</p>
+<!-- Game Buttons Container -->
+<div class="game-buttons-container">
+    <div class="game-item">
+        <button onclick="window.location.href='games/driftboss.html'" class="game-button" aria-label="Drift Boss Game">
+            <img src="../images/71Rvyj1gI1L.png" alt="Drift Boss Game Button Image">
+        </button>
+        <p class="game-title">Drift Boss</p>
+    </div>
 
-<button onclick="window.location.href='games/monkeymart.html'" class="game-button" aria-label="Monkey Mart Game">
-    <img src="../images/1200x630wa-removebg-preview (1).png" alt="Monkey Mart Game Button Image">
-</button>
-<p class="game-title">Monkey Mart</p>
+    <div class="game-item">
+        <button onclick="window.location.href='games/monkeymart.html'" class="game-button" aria-label="Monkey Mart Game">
+            <img src="../images/1200x630wa-removebg-preview (1).png" alt="Monkey Mart Game Button Image">
+        </button>
+        <p class="game-title">Monkey Mart</p>
+    </div>
+</div>
 
 </body>
 </html>

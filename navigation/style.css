@@ -7,6 +7,10 @@ body {
     background-size: cover;
     margin: 0;
     padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
+    display: flex;
+    justify-content: center;  /* Centers the content horizontally */
+    align-items: center;      /* Centers the content vertically */
+    height: 100vh;            /* Full viewport height */
 }
 
 /* Navbar styling */
@@ -19,6 +23,7 @@ ul {
     top: 0;
     text-align: left;
     z-index: 1000;
+    width: 100%;
 }
 
 li a {
@@ -66,6 +71,19 @@ li a.active {
 }
 
 /* Game button styling */
+.game-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.game-item {
+    display: inline-block;
+}
+
 .game-button {
     background-color: transparent;
     border: none;

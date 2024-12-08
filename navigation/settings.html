@@ -41,18 +41,17 @@
         doc.body.appendChild(iframe);
 
         // Setting the favicon for the new tab
-        var l = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
-        l.type = 'image/x-icon';
-        l.rel = 'icon';
-        l.href = favicon;
-        doc.head.appendChild(l);
+        const link = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'icon';
+        link.href = favicon;
+        doc.head.appendChild(link);
     }
 </script>
 
-
-<select id="ddl" name="ddl" onmousedown="this.value='';" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].favicon);">
+<select id="ddl" name="ddl" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('favicon'));">
   <option disabled selected value> -- Cloak -- </option>
-  <option title='Arcade 3' favicon='favicon.ico'>None</option>
-  <option title='Home' favicon='Classroom.ico'>Google Classroom</option>
-  <option title='My Apps' favicon='../images/classlink.ico'>Classlink</option>
+  <option title="Arcade 3" favicon="favicon.ico">None</option>
+  <option title="Home" favicon="Classroom.ico">Google Classroom</option>
+  <option title="My Apps" favicon="../images/classlink.ico">Classlink</option>
 </select>

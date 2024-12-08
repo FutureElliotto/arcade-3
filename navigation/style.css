@@ -1,87 +1,90 @@
-        /* Consolidated body styles */
-        body {
-            font-family: "Pixelify Sans", sans-serif;
-            background-image: url('../images/void.jpg');
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
-            margin: 0;
-            padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
-        }
+/* Consolidated body styles */
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-image: url('../images/void.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
+}
 
-        /* Navbar styling */
-        ul {
-            display: flex;
-            width: 100%; 
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            top: 0;
-            background-size: cover;
-            width: 100%;
-            z-index: 1000;
-        }
+/* Navbar styling */
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    background-size: cover;
+    width: 100%;
+    z-index: 1000;
+    justify-content: flex-start; /* Align navbar items to the left */
+}
 
-        li a {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            color: white;
-        }
+/* Navbar items styling */
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
 
-        li a:hover {
-            font-weight: bold;
-        }
+/* Hover effect for navbar items */
+li a:hover {
+    font-weight: bold;
+}
 
-        li a.active {
-            color: #7F00FF; /* Active link color */
-        }
+/* Active link color */
+li a.active {
+    color: #7F00FF;
+}
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        .dropdown-content {
-            display: none;
-            background-color: #000000; /* Fixed syntax error */
-            position: absolute;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+.dropdown-content {
+    display: none;
+    background-color: #000000; 
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        /* Game button styling */
-        .game-button {
-            background-color: transparent;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-        }
+/* Game button styling */
+.game-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
 
-        .game-button img {
-            width: 200px;
-            height: 200px;
-            vertical-align: middle;
-        }
+.game-button img {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+}
 
-        .game-title {
-            color: white;
-            font-size: 18px;
-            margin-top: 10px;
-        }
+.game-title {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}

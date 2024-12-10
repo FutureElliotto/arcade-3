@@ -32,12 +32,13 @@
 <!-- Iframe containing the game -->
 <iframe id="Game" style="width:100%;height:800px;overflow:scroll;" frameBorder="0"></iframe>
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    var mainParameter = window.location.search;
-    var address = "https://example.com";
-    var combined = address + mainParameter;
-    document.getElementById('Game').setAttribute("src", combined); // sends the value to the iframe src!
+    <iframe id="Game" style="display: block; width: 100%; height: 600px;"></iframe>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        var mainParameter = window.location.search;
+        var address = "index.html";
+        var combined = address + mainParameter;
+        document.getElementById('Game').setAttribute("src", combined); // sends the value to the iframe src!
 });
 </script>
 </body>

@@ -24,7 +24,6 @@ ul {
     text-align: left;
     z-index: 1000;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Add a slight background for better visibility */
 }
 
 li a {
@@ -51,7 +50,7 @@ li a.active {
 
 .dropdown-content {
     display: none;
-    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent */
+    background-color: rgba(0, 0, 0, 0);
     text-align: left;
     position: absolute;
     min-width: 160px;

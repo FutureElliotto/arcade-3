@@ -9,7 +9,7 @@ body {
     padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
     display: flex;
     justify-content: center;  /* Centers the content horizontally */
-    align-items: flex-start;      /* Align items at the top */
+    align-items: center;      /* Centers the content vertically */
     height: 100vh;            /* Full viewport height */
 }
 
@@ -24,14 +24,11 @@ ul {
     text-align: left;
     z-index: 1000;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent navbar */
-    backdrop-filter: blur(10px);  /* Optional: adds blur effect behind navbar */
 }
 
-/* Navbar links */
 li a {
     display: block;
-    text-align: left;
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: white;
@@ -45,7 +42,6 @@ li a.active {
     color: #7F00FF; /* Active link color */
 }
 
-/* Dropdown menu */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -54,7 +50,7 @@ li a.active {
 
 .dropdown-content {
     display: none;
-    background-color: rgba(0, 0, 0, 0.9); /* Darker transparent background */
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent */
     text-align: left;
     position: absolute;
     min-width: 160px;

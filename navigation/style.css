@@ -1,106 +1,109 @@
-    /* Consolidated body styles */
-    body {
-        font-family: "Pixelify Sans", sans-serif;
-        background-image: url('../images/void.jpg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding-top: 60px; /* To prevent content from being hidden under the fixed navbar */
-        display: flex;
-        justify-content: center;  /* Centers the content horizontally */
-        align-items: center;      /* Centers the content vertically */
-        height: 100vh;            /* Full viewport height */
-    }
+        body {
+            font-family: "Pixelify Sans", sans-serif;
+            background-image: url('https://futureelliotto.github.io/arcade-3/images/hq720.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding-top: 60px;
+        }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
-    /* Navbar styling */
-    ul {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        top: 0;
-        text-align: left;
-        z-index: 1000;
-        width: 100%;
-    }
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensures it starts from the left edge */
+    background-size: cover;
+    z-index: 1000;
+    border-bottom: none; /* Ensures no border under the navbar */
+}
 
-    li a {
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        color: white;
-    }
+li {
+    flex: 1;
+}
 
-    li a:hover {
-        font-weight: bold;
-    }
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    margin: 0; /* Ensure no margin causing a gap under the links */
+}
 
-    li a.active {
-        color: #7F00FF; /* Active link color */
-    }
+li a:hover {
+    font-weight: bold;
+}
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        text-align: left;
-    }
+li a.active {
+    color: #7F00FF;
+}
 
-    .dropdown-content {
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent */
-        text-align: left;
-        position: absolute;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
+/* Add dropdown style */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-    .dropdown-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
+.dropdown-content {
+    display: none;
+    background-color: #000000;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
-    /* Game button styling */
-    .game-buttons-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-    .game-item {
-        display: inline-block;
-    }
+/* Game button styling */
+.game-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
 
-    .game-button {
-        background-color: transparent;
-        border: none;
-        padding: 15px;
-        cursor: pointer;
-        text-align: center;
-    }
+.game-button img {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+}
 
-    .game-button img {
-        width: 200px;
-        height: 200px;
-        vertical-align: middle;
-    }
+.game-title {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-    .game-title {
-        color: white;
-        font-size: 18px;
-        margin-top: 10px;
-        text-align: center;
-    }
+/* Iframe Styling */
+iframe {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border: none; /* Ensures no border around the iframe */
+}

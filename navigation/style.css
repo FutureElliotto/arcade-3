@@ -73,6 +73,9 @@ li a.active {
 
 /* Game button styling */
 .game-button {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: transparent;
     border: none;
     padding: 15px;
@@ -88,7 +91,7 @@ li a.active {
 .game-title {
     color: white;
     font-size: 18px;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 /* Iframe Styling */

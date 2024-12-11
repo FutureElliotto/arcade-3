@@ -32,16 +32,17 @@
 
     <script>
         // Change the iframe content when a link is clicked
-        function changeIframeContent(page) {
-            document.getElementById('Game').src = page;
+function changeIframeContent(page) {
+    document.getElementById('Game').src = page;
 
-            // Set active class for navigation links
-            document.querySelectorAll('ul li a').forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`a[href="${page}"]`).classList.add('active');
-        }
+    // Set active class for navigation links
+    document.querySelectorAll('ul li a').forEach(link => {
+        link.classList.remove('active');
+    });
 
+    // Update this line to match the text content instead
+    document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
+}
         // Set initial page when document is loaded
         document.addEventListener("DOMContentLoaded", function() {
             var mainParameter = window.location.search;

@@ -1,6 +1,6 @@
         body {
             font-family: "Pixelify Sans", sans-serif;
-            background-image: url('https://futureelliotto.github.io/arcade-3/images/hq720.jpg');
+            background-image: url('../images/void.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -18,6 +18,7 @@ ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
+     text-align: left; 
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -27,10 +28,6 @@ ul {
     background-size: cover;
     z-index: 1000;
     border-bottom: none; /* Ensures no border under the navbar */
-}
-
-li {
-    flex: 1;
 }
 
 li a {

@@ -193,7 +193,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         var keys = [];
-        var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]; // Konami code
+        var code = [90, 77, 71]; // Konami code
 
         $(document).keydown(function(keyEvent) {
           console.log("Key pressed: ", keyEvent.keyCode); // Debugging
@@ -257,7 +257,7 @@
         var l = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
         l.type = 'image/x-icon';
         l.rel = 'icon';
-        l.href = 'https://user-images.githubusercontent.com/130446887/236890346-a33ab9eb-5493-4da8-af8d-b97a3414b458.png'; // Ensure this path is correct
+        l.href = 'images/logo.png'; // Ensure this path is correct
         doc.head.appendChild(l);
       }
     </script>

@@ -1,10 +1,11 @@
-        body {
-            font-family: "Pixelify Sans", sans-serif;
-            background-size: cover;
-            text-align: center;
-            margin: 0;
-            padding-top: 60px;
-        }
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
-     text-align: left; 
+    text-align: left;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,6 +70,15 @@ li a.active {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Game buttons container styling (updated) */
+.game-buttons-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Vertically aligns the buttons */
+    gap: 20px; /* Adjusts the spacing between buttons */
+    margin-top: 100px; /* Adds top margin to ensure it's below any fixed elements like navbar */
 }
 
 /* Game button styling */

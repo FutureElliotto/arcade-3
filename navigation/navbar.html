@@ -46,7 +46,6 @@ function changeIframeContent(page) {
         link.classList.remove('active');
     });
 
-    // Update this line to match the text content instead
     document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
 }
         // Set initial page when document is loaded
@@ -55,6 +54,7 @@ function changeIframeContent(page) {
             var address = "home.html"; 
             var combined = address + mainParameter;
             document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
+            document.getElementById('Game').src += ''; 
         });
     </script>
 

@@ -22,10 +22,10 @@ ul {
     padding: 0;
     position: fixed;
     top: 0;
-    left: 0; /* Ensures it starts from the left edge */
+    left: 0;
     background-size: cover;
     z-index: 1000;
-    border-bottom: none; /* Ensures no border under the navbar */
+    border-bottom: none;
 }
 
 li a {
@@ -34,7 +34,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     color: white;
-    margin: 0; /* Ensure no margin causing a gap under the links */
+    margin: 0;
 }
 
 li a:hover {
@@ -45,7 +45,6 @@ li a.active {
     color: #7F00FF;
 }
 
-/* Add dropdown style */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -75,10 +74,10 @@ li a.active {
 /* Game buttons container styling (updated) */
 .game-buttons-container {
     display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line */
     justify-content: center; /* Centers the buttons horizontally */
-    align-items: center; /* Vertically aligns the buttons */
-    gap: 20px; /* Adjusts the spacing between buttons */
-    margin-top: 100px; /* Adds top margin to ensure it's below any fixed elements like navbar */
+    gap: 20px; /* Adjusts spacing between buttons */
+    margin-top: 100px; /* Ensures space below navbar */
 }
 
 /* Game button styling */
@@ -90,10 +89,10 @@ li a.active {
 }
 
 .game-button img {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* Makes the images responsive */
+    height: auto;
+    max-width: 200px; /* Ensures the images do not exceed 200px */
     border-radius: 25px;
-    vertical-align: middle;
 }
 
 .game-title {
@@ -110,5 +109,5 @@ iframe {
     top: 60px;
     left: 0;
     right: 0;
-    border: none; /* Ensures no border around the iframe */
+    border: none;
 }

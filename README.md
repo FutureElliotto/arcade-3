@@ -14,6 +14,7 @@
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
+- 1/1/2025/4:25/PM Improved readme
 - 1/1/2025/3:46/PM Added change log and tunnel rush
 
 

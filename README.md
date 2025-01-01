@@ -1,4 +1,5 @@
 <div align="center">
+        <a href="https://github.com/FutureElliotto/arcade-3" target="_blank">
         <img src="images/title.png" 
         alt="title"
     </a>

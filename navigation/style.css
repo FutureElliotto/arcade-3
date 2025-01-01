@@ -135,5 +135,9 @@ iframe {
 }
 
 #searchBar:focus {
-    outline: 2px solid #8F00FF;
+    color: #7F00FF;
+}
+
+#searchBar:not(:focus)
+    color: white;
 }

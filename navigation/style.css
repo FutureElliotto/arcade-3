@@ -120,7 +120,6 @@ iframe {
 .search-container {
     margin: 20px;
     text-align: center;
-    border: 2px solid white;
 }
 
 #searchBar {
@@ -131,10 +130,10 @@ iframe {
     width: 80%;
     max-width: 400px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid white;
     outline: none; /* Removes the default outline */
 }
 
 #searchBar:focus {
-    outline: 2px solid white;
+    outline: 2px solid #8F00FF;
 }

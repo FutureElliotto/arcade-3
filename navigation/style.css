@@ -142,7 +142,6 @@ iframe {
     color: white;
 }
 
-/* Select Dropdown Styling */
 select {
     font-family: "Pixelify Sans", sans-serif;
     padding: 10px 20px;
@@ -154,10 +153,10 @@ select {
     border: 2px solid white;
     outline: none;
     color: white;
-    appearance: none;
-    background-image: url('../images/arrow-down.svg'); 
+    appearance: none; /* Disable the default arrow */
+    background-image: url('../images/arrow-down.svg'); /* Ensure the path is correct */
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 10px center; /* Position the arrow */
     background-size: 16px;
 }
 
@@ -165,11 +164,15 @@ select:focus {
     border-color: #7F00FF;
 }
 
+/* Styling for the dropdown options */
 option {
     background-color: black;
     color: white;
+    padding: 10px;
+    font-size: 16px;
 }
 
+/* Styling for disabled options */
 option:disabled {
     color: gray;
 }

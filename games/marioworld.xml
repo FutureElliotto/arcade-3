@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Super Mario World" />
+<Content type="html"><![CDATA[
+
 <html>
     <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
@@ -9,7 +14,7 @@
           gtag('config', 'G-7FN7LEVWXD');
         </script>
 
-        <title>Super Mario World | Seraph</title>
+        <title>Super Mario World</title>
         <link rel="shortcut icon" href="../../images/ico.ico">
         <style>
             body {
@@ -34,3 +39,6 @@
         <script src="emulatorjs/data/loader.js"></script>
     </body>
 </html>
+
+]]></Content>
+</Module>

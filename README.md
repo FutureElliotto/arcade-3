@@ -14,6 +14,7 @@
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
+- 1/4/2025/11:36/PM Added Super Mario 63 and Plants vs Zombies
 - 1/2/2025/10:00/PM Added Drift Boss
 - 1/1/2025/4:25/PM Improved readme
 - 1/1/2025/3:46/PM Added change log and tunnel rush

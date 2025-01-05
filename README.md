@@ -14,6 +14,7 @@
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
+- 1/5/2025/2:16/PM Added a hover effect to the game buttons
 - 1/4/2025/11:36/PM Added Super Mario 63 and Plants vs Zombies
 - 1/2/2025/10:00/PM Added Drift Boss
 - 1/1/2025/4:25/PM Improved readme

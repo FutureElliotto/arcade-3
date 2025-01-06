@@ -111,6 +111,35 @@ li a.active {
     object-fit: cover; /* Ensures the image covers the button area without distortion */
     border-radius: 25px;
 }
+.game-button-no-rounding {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.game-button-no-rounding:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.game-button-no-rounding img {
+    width: 100%; /* Makes the image fill the width of the button */
+    height: 100%; /* Makes the image fill the height of the button */
+    object-fit: cover; /* Ensures the image covers the button area without distortion */
+}
 
 .game-title {
     color: white;

@@ -15,7 +15,7 @@
 - [Pacmanfan1112](https://scratch.mit.edu/users/Pacmanfan1112)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
-- 1/6/2025/3:26/PM added Ultimate Custom Night, Five Nights At Freddys 4, Five Nights At Freddys 3, Five Nights At Freddys 2, Five Nights At Freddys 1, and Doodle Jump
+- 1/6/2025/3:26/PM added Minecraft, Five Nights At Freddys 4, Five Nights At Freddys 3, Five Nights At Freddys 2, Five Nights At Freddys 1, and Doodle Jump
 - 1/5/2025/2:16/PM Added a hover effect to the game buttons
 - 1/4/2025/11:36/PM Added Super Mario 63 and Plants vs Zombies
 - 1/2/2025/10:00/PM Added Drift Boss

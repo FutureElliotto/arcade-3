@@ -12,6 +12,7 @@
 - [DomPizzie](https://github.com/DomPizzie)
 - [guiles](https://scratch.mit.edu/users/guiles/)
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
+- [Pacmanfan1112](https://scratch.mit.edu/users/Pacmanfan1112)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
 - 1/6/2025/3:26/PM added Ultimate Custom Night, Five Nights At Freddys 4, Five Nights At Freddys 3, Five Nights At Freddys 2, Five Nights At Freddys 1, and Doodle Jump

@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for a app..." onkeyup="searchGames()" />
+</div>
+
+<!-- Game Buttons Container -->
+<div class="game-buttons-container">
+    <div class="game-item">
+        <button onclick="window.location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=KowD_LZybEGqkEEqqVqkToZONU0cJF9AorlY4eY3ptpUNU5NRzlRUkVNOUZHNE5SNFBTTkpBSDZNMi4u'" class="game-button-no-rounding" aria-label="Request a Game">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Microsoft_Forms_%282019-present%29.svg/1200px-Microsoft_Forms_%282019-present%29.svg.png" alt="Request a Game Button Image">
+        </button>
+        <p class="game-title">Request a Game/App</p>
+    </div>
+    <div class="game-item">
+        <button onclick="window.location.href='../../games/Apps/ruffle.html'" class="game-button" aria-label="ruffle">
+            <img src="../../images/games/ruffle.avif" alt="Ruffle app Button Image">
+        </button>
+        <p class="game-title">Ruffle</p>
+    </div>
+    <div class="game-item">
+        <button onclick="window.location.href='https://www.wikipedia.org'" class="game-button" aria-label="Wikipedia">
+            <img src="../../images/apps/Wikipedia.png" alt="Wikipedia app Button Image">
+        </button>
+        <p class="game-title">Wikipedia</p>
+    </div>
+</div>
+    <div class="game-item">
+        <button onclick="window.location.href='../../games/Apps/youtube/'" class="game-button" aria-label="Youtube">
+            <img src="../../images/games/youtube.png" alt="Youtube app Button Image">
+        </button>
+        <p class="game-title">Youtube</p>
+    </div>
+</div>
+
+<script>
+function searchGames() {
+    let input = document.getElementById('searchBar').value.toLowerCase();
+    let gameItems = document.querySelectorAll('.game-item');
+    
+    gameItems.forEach(function(item) {
+        let title = item.querySelector('.game-title').textContent.toLowerCase();
+        if (title.indexOf(input) > -1) {
+            item.style.display = 'block'; // Show the game if it matches the search
+        } else {
+            item.style.display = 'none'; // Hide the game if it doesn't match
+        }
+    });
+}
+</script>
+
+</body>
+</html>

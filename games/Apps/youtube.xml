@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<Module>
+<ModulePrefs title="Cookie Clicker"/>
+<Content type="html">
+<![CDATA[ <!DOCTYPE html>
 <!-- saved from url=(0024)https://michael.team/yt/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -213,4 +217,6 @@ xoutu.be/VIDEOID</code></pre></figure>
 
 </div>
 
-</body></html>
+</body></html> ]]>
+</Content>
+</Module>

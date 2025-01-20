@@ -52,6 +52,7 @@
         // Adding an iframe to the new window
         const iframe = doc.createElement('iframe');
         iframe.src = "https://parts-of-a-cells.neocities.org/navbar";
+        iframe.allowFullscreen = true; // Allow fullscreen
         doc.body.appendChild(iframe);
 
         // Setting the favicon for the new tab

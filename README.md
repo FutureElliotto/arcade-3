@@ -13,6 +13,7 @@
 - [guiles](https://scratch.mit.edu/users/guiles/)
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
 - [Pacmanfan1112](https://scratch.mit.edu/users/Pacmanfan1112)
+- [RokCoder](https://scratch.mit.edu/users/RokCoder)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
 - 1/20/2025/4:55/PM added Wonderputt, Super Mario World, and Astroids

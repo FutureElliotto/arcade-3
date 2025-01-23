@@ -1,4 +1,7 @@
-
+<Module>
+<ModulePrefs title="Super Mario World"/>
+<Content type="html">
+<![CDATA[
 <html>
     <head>
         <!--HTML file auto generated using EmulatorJS codehelper-->
@@ -24,4 +27,6 @@
         </script>
         <script src='https://cdn.emulatorjs.org/stable/data/loader.js'></script>
     </body>
-</html>
+</html> ]]>
+</Content>
+</Module>

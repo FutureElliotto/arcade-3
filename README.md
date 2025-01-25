@@ -13,9 +13,11 @@
 - [guiles](https://scratch.mit.edu/users/guiles/)
 - [mvbit](https://penguinmod.com/profile?user=mvbit)
 - [Pacmanfan1112](https://scratch.mit.edu/users/Pacmanfan1112)
+- [quadrupleslap](https://scratch.mit.edu/users/quadrupleslap)
 - [RokCoder](https://scratch.mit.edu/users/RokCoder)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
+- 1/24/2025/8:05/PM added Fruit Ninja
 - 1/20/2025/4:55/PM added Wonderputt, Super Mario World, and Astroids
 - 1/14/2025/1:08/PM added Apps, Youtube, Wikipedia, Ruffle, and Centipede
 - 1/6/2025/3:26/PM added Minecraft, Five Nights At Freddys 4, Five Nights At Freddys 3, Five Nights At Freddys 2, Five Nights At Freddys 1, and Doodle Jump

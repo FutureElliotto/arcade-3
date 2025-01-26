@@ -17,7 +17,7 @@
 - [RokCoder](https://scratch.mit.edu/users/RokCoder)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
-- 1/25/2025/3:21/PM added Bitlife
+- 1/25/2025/3:21/PM added Bitlife and 1v1.lol
 - 1/24/2025/8:05/PM added Fruit Ninja, Super Mario All Stars, And Basketball Stars
 - 1/20/2025/4:55/PM added Wonderputt, Super Mario World, and Astroids
 - 1/14/2025/1:08/PM added Apps, Youtube, Wikipedia, Ruffle, and Centipede

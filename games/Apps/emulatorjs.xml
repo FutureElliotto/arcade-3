@@ -192,6 +192,6 @@
             box.ondragleave = () => box.removeAttribute("drag");
         </script>
     </body>
-</html>
+</html>]]>
 </Content>
 </Module>

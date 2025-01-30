@@ -1,0 +1,157 @@
+<html><head><script>
+for(var b=0,a=c.length;
+b<a;
+++b){if(f.test(c[b].id)){e.push(c[b])
+}}return e
+}function _esc(a){return window.encodeURIComponent?encodeURIComponent(a):escape(a)
+}function _unesc(a){return window.decodeURIComponent?decodeURIComponent(a):unescape(a)
+}function _hesc(a){return gadgets.util.escapeString(a)
+}function _striptags(a){return a.replace(/<\/?[^>]+>/g,"")
+}function _trim(a){return a.replace(/^\s+|\s+$/g,"")
+}function _toggle(a){a=(typeof a==="string")?_gel(a):a;
+if(a!==null){if(a.style.display.length===0||a.style.display==="block"){a.style.display="none"
+}else{if(a.style.display==="none"){a.style.display="block"
+}}}}var _uid=(function(){var a=0;
+return function(){return a++
+}
+})();
+function _min(d,c){return(d<c?d:c)
+}function _max(d,c){return(d>c?d:c)
+}function _exportSymbols(a,c){var m=window;
+var f=a.split(".");
+for(var h=0,g=f.length;
+h<g;
+h++){var b=f[h];
+m[b]=m[b]||{};
+m=m[b]
+}for(var e=0,d=c.length;
+e<d;
+e+=2){m[c[e]]=c[e+1]
+}}function _IG_AddDOMEventHandler(c,b,a){gadgets.warn("_IG_AddDOMEventHandler not implemented - see SHINDIG-198")
+};;
+(function(){function f(b,c,a){b={msg:b||"",line:a||0,jsUrl:window.location.href.indexOf(c)==0?"-top-":c,fullUrl:window.location};try{if(++window._varz_numerrors,gadgets&&!(e>3)){c={};c[gadgets.io.RequestParameters.METHOD]=gadgets.io.MethodType.GET;a=encodeURIComponent||escape;var d=gadgets.util.getUrlParameters(),g=d.container||d.synd,h=d.gadget||d.url,l=["/gadgets/evthdlr?t=err&gadget=",a(h),"&container=",a(g),"&jsurl=",a(b.jsUrl),"&line=",a(b.line),"&session=",k,"&count=",e,"&msg=",a(b.msg)];gadgets.io.makeNonProxiedRequest(l.join(""),
+null,c);e++}}catch(m){}}window._varz_numerrors=0;var k=(new Date).getTime(),e=0;window.location.href.indexOf("&debug=1")==-1&&window.location.href.indexOf("?debug=1")==-1&&(window.onerror=f)})();
+;
+(function(){var l=null,q=function(){function e(a){a=(""+a).match(w);return!a?l:new b(p(a[1]),p(a[2]),p(a[3]),p(a[4]),p(a[5]),p(a[6]),p(a[7]))}function x(a,e){return"string"==typeof a?encodeURI(a).replace(e,y):l}function y(a){a=a.charCodeAt(0);return"%"+"0123456789ABCDEF".charAt(a>>4&15)+"0123456789ABCDEF".charAt(a&15)}function u(a){if(a===l)return l;for(var a=a.replace(/(^|\/)\.(?:\/|$)/g,"$1").replace(/\/{2,}/g,"/"),e=z,m;(m=a.replace(e,"$1"))!=a;a=m);return a}function v(a,e){var m=a.R(),b=e.K();b?m.fa(e.j):
+b=e.V();b?m.ca(e.n):b=e.W();b?m.da(e.k):b=e.Y();var s=e.g,g=u(s);if(b)m.ba(e.T()),g=g&&g.replace(j,"");else if(b=!!s){if(47!==g.charCodeAt(0))var g=u(m.g||"").replace(j,""),p=g.lastIndexOf("/")+1,g=u((p?g.substring(0,p):"")+u(s)).replace(j,"")}else g=g&&g.replace(j,""),g!==s&&m.G(g);b?m.G(g):b=e.Z();b?m.M(e.l):b=e.X();b&&m.ea(e.o);return m}function b(a,e,b,j,s,g,p){this.j=a;this.n=e;this.k=b;this.h=j;this.g=s;this.l=g;this.o=p}function p(a){return"string"==typeof a&&0<a.length?a:l}var z=RegExp(/(\/|^)(?:[^./][^/]*|\.{2,}(?:[^./][^/]*)|\.{3,}[^/]*)\/\.\.(?:\/|$)/),
+j=/^(?:\.\.\/)*(?:\.\.$)?/;b.prototype.toString=function(){var a=[];l!==this.j&&a.push(this.j,":");l!==this.k&&(a.push("//"),l!==this.n&&a.push(this.n,"@"),a.push(this.k),l!==this.h&&a.push(":",this.h.toString()));l!==this.g&&a.push(this.g);l!==this.l&&a.push("?",this.l);l!==this.o&&a.push("#",this.o);return a.join("")};b.prototype.R=function(){return new b(this.j,this.n,this.k,this.h,this.g,this.l,this.o)};b.prototype.U=function(){return this.j&&decodeURIComponent(this.j).toLowerCase()};b.prototype.fa=
+function(a){this.j=a?a:l};b.prototype.K=function(){return l!==this.j};b.prototype.ca=function(a){this.n=a?a:l};b.prototype.V=function(){return l!==this.n};b.prototype.da=function(a){this.k=a?a:l;this.G(this.g)};b.prototype.W=function(){return l!==this.k};b.prototype.T=function(){return this.h&&decodeURIComponent(this.h)};b.prototype.ba=function(a){if(a){a=Number(a);if(a!==(a&65535))throw Error("Bad port number "+a);this.h=""+a}else this.h=l};b.prototype.Y=function(){return l!==this.h};b.prototype.S=
+function(){return this.g&&decodeURIComponent(this.g)};b.prototype.G=function(a){a?(a=""+a,this.g=!this.k||/^\//.test(a)?a:"/"+a):this.g=l};b.prototype.M=function(a){this.l=a?a:l};b.prototype.Z=function(){return l!==this.l};b.prototype.aa=function(a){if("object"===typeof a&&!(a instanceof Array)&&(a instanceof Object||"[object Array]"!==Object.prototype.toString.call(a))){var e=[],b=-1,j;for(j in a){var s=a[j];"string"===typeof s&&(e[++b]=j,e[++b]=s)}a=e}for(var e=[],b="",g=0;g<a.length;)j=a[g++],
+s=a[g++],e.push(b,encodeURIComponent(j.toString())),b="&",s&&e.push("=",encodeURIComponent(s.toString()));this.l=e.join("")};b.prototype.ea=function(a){this.o=a?a:l};b.prototype.X=function(){return l!==this.o};var w=/^(?:([^:/?#]+):)?(?:\/\/(?:([^/?#]*)@)?([^/?#:@]*)(?::([0-9]+))?)?([^?#]+)?(?:\?([^#]*))?(?:#(.*))?$/,B=/[#\/\?@]/g,C=/[\#\?]/g;b.parse=e;b.create=function(a,e,j,p,s,g,u){a=new b(x(a,B),x(e,B),"string"==typeof j?encodeURIComponent(j):l,0<p?p.toString():l,x(s,C),l,"string"==typeof u?encodeURIComponent(u):
+l);g&&("string"===typeof g?a.M(g.replace(/[^?&=0-9A-Za-z_\-~.%]/g,y)):a.aa(g));return a};b.$=v;b.ja=u;b.va={pa:function(a){return/\.html$/.test(e(a).S())?"text/html":"application/javascript"},$:function(a,b){return a?v(e(a),e(b)).toString():""+b}};return b}();"undefined"!==typeof window&&(window.URI=q);var M={f:{NONE:0,URI:1,URI_FRAGMENT:11,SCRIPT:2,STYLE:3,HTML:12,ID:4,IDREF:5,IDREFS:6,GLOBAL_NAME:7,LOCAL_NAME:8,CLASSES:9,FRAME_TARGET:10,MEDIA_QUERY:13}};M.atype=M.f;
+M.w={"*::class":9,"*::dir":0,"*::draggable":0,"*::hidden":0,"*::id":4,"*::inert":0,"*::itemprop":0,"*::itemref":6,"*::itemscope":0,"*::lang":0,"*::onblur":2,"*::onchange":2,"*::onclick":2,"*::ondblclick":2,"*::onerror":2,"*::onfocus":2,"*::onkeydown":2,"*::onkeypress":2,"*::onkeyup":2,"*::onload":2,"*::onmousedown":2,"*::onmousemove":2,"*::onmouseout":2,"*::onmouseover":2,"*::onmouseup":2,"*::onreset":2,"*::onscroll":2,"*::onselect":2,"*::onsubmit":2,"*::ontouchcancel":2,"*::ontouchend":2,"*::ontouchenter":2,
+"*::ontouchleave":2,"*::ontouchmove":2,"*::ontouchstart":2,"*::onunload":2,"*::spellcheck":0,"*::style":3,"*::tabindex":0,"*::title":0,"*::translate":0,"a::accesskey":0,"a::coords":0,"a::href":1,"a::hreflang":0,"a::name":7,"a::onblur":2,"a::onfocus":2,"a::shape":0,"a::target":10,"a::type":0,"area::accesskey":0,"area::alt":0,"area::coords":0,"area::href":1,"area::nohref":0,"area::onblur":2,"area::onfocus":2,"area::shape":0,"area::target":10,"audio::controls":0,"audio::loop":0,"audio::mediagroup":5,
+"audio::muted":0,"audio::preload":0,"audio::src":1,"bdo::dir":0,"blockquote::cite":1,"br::clear":0,"button::accesskey":0,"button::disabled":0,"button::name":8,"button::onblur":2,"button::onfocus":2,"button::type":0,"button::value":0,"canvas::height":0,"canvas::width":0,"caption::align":0,"col::align":0,"col::char":0,"col::charoff":0,"col::span":0,"col::valign":0,"col::width":0,"colgroup::align":0,"colgroup::char":0,"colgroup::charoff":0,"colgroup::span":0,"colgroup::valign":0,"colgroup::width":0,
+"command::checked":0,"command::command":5,"command::disabled":0,"command::icon":1,"command::label":0,"command::radiogroup":0,"command::type":0,"data::value":0,"del::cite":1,"del::datetime":0,"details::open":0,"dir::compact":0,"div::align":0,"dl::compact":0,"fieldset::disabled":0,"font::color":0,"font::face":0,"font::size":0,"form::accept":0,"form::action":1,"form::autocomplete":0,"form::enctype":0,"form::method":0,"form::name":7,"form::novalidate":0,"form::onreset":2,"form::onsubmit":2,"form::target":10,
+"h1::align":0,"h2::align":0,"h3::align":0,"h4::align":0,"h5::align":0,"h6::align":0,"hr::align":0,"hr::noshade":0,"hr::size":0,"hr::width":0,"iframe::align":0,"iframe::frameborder":0,"iframe::height":0,"iframe::marginheight":0,"iframe::marginwidth":0,"iframe::width":0,"img::align":0,"img::alt":0,"img::border":0,"img::height":0,"img::hspace":0,"img::ismap":0,"img::name":7,"img::src":1,"img::usemap":11,"img::vspace":0,"img::width":0,"input::accept":0,"input::accesskey":0,"input::align":0,"input::alt":0,
+"input::autocomplete":0,"input::checked":0,"input::disabled":0,"input::inputmode":0,"input::ismap":0,"input::list":5,"input::max":0,"input::maxlength":0,"input::min":0,"input::multiple":0,"input::name":8,"input::onblur":2,"input::onchange":2,"input::onfocus":2,"input::onselect":2,"input::pattern":0,"input::placeholder":0,"input::readonly":0,"input::required":0,"input::size":0,"input::src":1,"input::step":0,"input::type":0,"input::usemap":11,"input::value":0,"ins::cite":1,"ins::datetime":0,"label::accesskey":0,
+"label::for":5,"label::onblur":2,"label::onfocus":2,"legend::accesskey":0,"legend::align":0,"li::type":0,"li::value":0,"map::name":7,"menu::compact":0,"menu::label":0,"menu::type":0,"meter::high":0,"meter::low":0,"meter::max":0,"meter::min":0,"meter::optimum":0,"meter::value":0,"ol::compact":0,"ol::reversed":0,"ol::start":0,"ol::type":0,"optgroup::disabled":0,"optgroup::label":0,"option::disabled":0,"option::label":0,"option::selected":0,"option::value":0,"output::for":6,"output::name":8,"p::align":0,
+"pre::width":0,"progress::max":0,"progress::min":0,"progress::value":0,"q::cite":1,"select::autocomplete":0,"select::disabled":0,"select::multiple":0,"select::name":8,"select::onblur":2,"select::onchange":2,"select::onfocus":2,"select::required":0,"select::size":0,"source::type":0,"table::align":0,"table::bgcolor":0,"table::border":0,"table::cellpadding":0,"table::cellspacing":0,"table::frame":0,"table::rules":0,"table::summary":0,"table::width":0,"tbody::align":0,"tbody::char":0,"tbody::charoff":0,
+"tbody::valign":0,"td::abbr":0,"td::align":0,"td::axis":0,"td::bgcolor":0,"td::char":0,"td::charoff":0,"td::colspan":0,"td::headers":6,"td::height":0,"td::nowrap":0,"td::rowspan":0,"td::scope":0,"td::valign":0,"td::width":0,"textarea::accesskey":0,"textarea::autocomplete":0,"textarea::cols":0,"textarea::disabled":0,"textarea::inputmode":0,"textarea::name":8,"textarea::onblur":2,"textarea::onchange":2,"textarea::onfocus":2,"textarea::onselect":2,"textarea::placeholder":0,"textarea::readonly":0,"textarea::required":0,
+"textarea::rows":0,"textarea::wrap":0,"tfoot::align":0,"tfoot::char":0,"tfoot::charoff":0,"tfoot::valign":0,"th::abbr":0,"th::align":0,"th::axis":0,"th::bgcolor":0,"th::char":0,"th::charoff":0,"th::colspan":0,"th::headers":6,"th::height":0,"th::nowrap":0,"th::rowspan":0,"th::scope":0,"th::valign":0,"th::width":0,"thead::align":0,"thead::char":0,"thead::charoff":0,"thead::valign":0,"tr::align":0,"tr::bgcolor":0,"tr::char":0,"tr::charoff":0,"tr::valign":0,"track::default":0,"track::kind":0,"track::label":0,
+"track::srclang":0,"ul::compact":0,"ul::type":0,"video::controls":0,"video::height":0,"video::loop":0,"video::mediagroup":5,"video::muted":0,"video::poster":1,"video::preload":0,"video::src":1,"video::width":0};M.ATTRIBS=M.w;M.c={OPTIONAL_ENDTAG:1,EMPTY:2,CDATA:4,RCDATA:8,UNSAFE:16,FOLDABLE:32,SCRIPT:64,STYLE:128,VIRTUALIZED:256};M.eflags=M.c;
+M.e={a:0,abbr:0,acronym:0,address:0,applet:272,area:2,article:0,aside:0,audio:0,b:0,base:274,basefont:274,bdi:0,bdo:0,big:0,blockquote:0,body:305,br:2,button:0,canvas:0,caption:0,center:0,cite:0,code:0,col:2,colgroup:1,command:2,data:0,datalist:0,dd:1,del:0,details:0,dfn:0,dialog:272,dir:0,div:0,dl:0,dt:1,em:0,fieldset:0,figcaption:0,figure:0,font:0,footer:0,form:0,frame:274,frameset:272,h1:0,h2:0,h3:0,h4:0,h5:0,h6:0,head:305,header:0,hgroup:0,hr:2,html:305,i:0,iframe:4,img:2,input:2,ins:0,isindex:274,
+kbd:0,keygen:274,label:0,legend:0,li:1,link:274,map:0,mark:0,menu:0,meta:274,meter:0,nav:0,nobr:0,noembed:276,noframes:276,noscript:276,object:272,ol:0,optgroup:0,option:1,output:0,p:1,param:274,pre:0,progress:0,q:0,s:0,samp:0,script:84,section:0,select:0,small:0,source:2,span:0,strike:0,strong:0,style:148,sub:0,summary:0,sup:0,table:0,tbody:1,td:1,textarea:8,tfoot:1,th:1,thead:1,time:0,title:280,tr:1,track:2,tt:0,u:0,ul:0,"var":0,video:0,wbr:2};M.ELEMENTS=M.e;
+M.O={a:"HTMLAnchorElement",abbr:"HTMLElement",acronym:"HTMLElement",address:"HTMLElement",applet:"HTMLAppletElement",area:"HTMLAreaElement",article:"HTMLElement",aside:"HTMLElement",audio:"HTMLAudioElement",b:"HTMLElement",base:"HTMLBaseElement",basefont:"HTMLBaseFontElement",bdi:"HTMLElement",bdo:"HTMLElement",big:"HTMLElement",blockquote:"HTMLQuoteElement",body:"HTMLBodyElement",br:"HTMLBRElement",button:"HTMLButtonElement",canvas:"HTMLCanvasElement",caption:"HTMLTableCaptionElement",center:"HTMLElement",
+cite:"HTMLElement",code:"HTMLElement",col:"HTMLTableColElement",colgroup:"HTMLTableColElement",command:"HTMLCommandElement",data:"HTMLElement",datalist:"HTMLDataListElement",dd:"HTMLElement",del:"HTMLModElement",details:"HTMLDetailsElement",dfn:"HTMLElement",dialog:"HTMLDialogElement",dir:"HTMLDirectoryElement",div:"HTMLDivElement",dl:"HTMLDListElement",dt:"HTMLElement",em:"HTMLElement",fieldset:"HTMLFieldSetElement",figcaption:"HTMLElement",figure:"HTMLElement",font:"HTMLFontElement",footer:"HTMLElement",
+form:"HTMLFormElement",frame:"HTMLFrameElement",frameset:"HTMLFrameSetElement",h1:"HTMLHeadingElement",h2:"HTMLHeadingElement",h3:"HTMLHeadingElement",h4:"HTMLHeadingElement",h5:"HTMLHeadingElement",h6:"HTMLHeadingElement",head:"HTMLHeadElement",header:"HTMLElement",hgroup:"HTMLElement",hr:"HTMLHRElement",html:"HTMLHtmlElement",i:"HTMLElement",iframe:"HTMLIFrameElement",img:"HTMLImageElement",input:"HTMLInputElement",ins:"HTMLModElement",isindex:"HTMLUnknownElement",kbd:"HTMLElement",keygen:"HTMLKeygenElement",
+label:"HTMLLabelElement",legend:"HTMLLegendElement",li:"HTMLLIElement",link:"HTMLLinkElement",map:"HTMLMapElement",mark:"HTMLElement",menu:"HTMLMenuElement",meta:"HTMLMetaElement",meter:"HTMLMeterElement",nav:"HTMLElement",nobr:"HTMLElement",noembed:"HTMLElement",noframes:"HTMLElement",noscript:"HTMLElement",object:"HTMLObjectElement",ol:"HTMLOListElement",optgroup:"HTMLOptGroupElement",option:"HTMLOptionElement",output:"HTMLOutputElement",p:"HTMLParagraphElement",param:"HTMLParamElement",pre:"HTMLPreElement",
+progress:"HTMLProgressElement",q:"HTMLQuoteElement",s:"HTMLElement",samp:"HTMLElement",script:"HTMLScriptElement",section:"HTMLElement",select:"HTMLSelectElement",small:"HTMLElement",source:"HTMLSourceElement",span:"HTMLSpanElement",strike:"HTMLElement",strong:"HTMLElement",style:"HTMLStyleElement",sub:"HTMLElement",summary:"HTMLElement",sup:"HTMLElement",table:"HTMLTableElement",tbody:"HTMLTableSectionElement",td:"HTMLTableDataCellElement",textarea:"HTMLTextAreaElement",tfoot:"HTMLTableSectionElement",
+th:"HTMLTableHeaderCellElement",thead:"HTMLTableSectionElement",time:"HTMLTimeElement",title:"HTMLTitleElement",tr:"HTMLTableRowElement",track:"HTMLTrackElement",tt:"HTMLElement",u:"HTMLElement",ul:"HTMLUListElement","var":"HTMLElement",video:"HTMLVideoElement",wbr:"HTMLElement"};M.ELEMENT_DOM_INTERFACES=M.O;M.N={NOT_LOADED:0,SAME_DOCUMENT:1,NEW_DOCUMENT:2};M.ueffects=M.N;
+M.J={"a::href":2,"area::href":2,"audio::src":1,"blockquote::cite":0,"command::icon":1,"del::cite":0,"form::action":2,"img::src":1,"input::src":1,"ins::cite":0,"q::cite":0,"video::poster":1,"video::src":1};M.URIEFFECTS=M.J;M.L={UNSANDBOXED:2,SANDBOXED:1,DATA:0};M.ltypes=M.L;M.I={"a::href":2,"area::href":2,"audio::src":2,"blockquote::cite":2,"command::icon":1,"del::cite":2,"form::action":2,"img::src":1,"input::src":1,"ins::cite":2,"q::cite":2,"video::poster":1,"video::src":2};M.LOADERTYPES=M.I;
+"undefined"!==typeof window&&(window.html4=M);var Q=function(e){function x(d){if(D.hasOwnProperty(d))return D[d];var a=d.match(R);return a?String.fromCharCode(parseInt(a[1],10)):(a=d.match(S))?String.fromCharCode(parseInt(a[1],16)):E&&T.test(d)?(E.innerHTML="&"+d+";",a=E.textContent,D[d]=a):"&"+d+";"}function y(d,a){return x(a)}function u(d){return d.replace(U,y)}function v(d){return(""+d).replace(N,"&amp;").replace(F,"&lt;").replace(G,"&gt;").replace(V,"&#34;")}function b(d){return(""+d).replace(N,"&amp;").replace(F,"&lt;").replace(G,"&gt;")}
+function p(d){return d.replace(W,"&amp;$1").replace(F,"&lt;").replace(G,"&gt;")}function z(d){var <script>gadgets.Prefs.setMessages_({});gadgets.Prefs.setDefaultPrefs_({});gadgets.io.preloaded_=[];</script><link href="https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/style-mobile.6e9cd.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Pixel Shooter 1</title>
+<meta content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="webkit" name="renderer">
+<meta content="webkit" name="force-rendering">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="no" name="msapplication-tap-highlight">
+<meta content="yes" name="full-screen">
+<meta content="true" name="x5-fullscreen">
+<meta content="true" name="360-fullscreen">
+<meta content="landscape" name="screen-orientation">
+<meta content="landscape" name="x5-orientation">
+<meta content="app" name="x5-page-mode">
+
+
+<script>
+/* mp-start */
+
+var _params = gadgets.util.getUrlParameters();
+if (_params['exp_rpc_js'] != 1) {
+  var url = _params['parent'] + '/ig/ifpc_relay';
+  gadgets.rpc.setRelayUrl('..', url, true);
+}
+/* mp-end */
+</script><style>.cocosVideo:-moz-full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:-webkit-full-screen{transform:matrix(1,0,0,1,0,0) !important;}</style><style type="text/css">#button {
+  display:none;
+}
+.imgb_vis {
+  animation: imgb-animation 7s linear;
+}
+@keyframes imgb-animation {
+  10% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(100px);
+  }
+  90% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}</style></head><body dir="ltr"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MENBM6GSNY"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-MENBM6GSNY")</script>
+<div id="Cocos2dGameContainer" style="transform: rotate(0deg); width: 958px; height: 633px; margin: 0px; padding: 0px;"><canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99" class="gameCanvas" width="958" height="633" style="width: 958px; height: 633px;"></canvas></div>
+<div id="splash" style="display: none;">
+<div class="progress-bar stripes">
+<span style="width: 100%;"></span>
+</div>
+</div>
+<script charset="utf-8" src="https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/src/settings.5beaa.js"></script>
+<script charset="utf-8" src="https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/main.93472.js"></script>
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !=='undefined') {
+        window.vConsole = new VConsole();
+    }
+
+    var debug = window._CCSettings.debug;
+    var splash = document.getElementById('splash');
+    splash.style.display ='block';
+
+    function loadScript (moduleName, cb) {
+      function scriptLoaded () {
+          document.body.removeChild(domScript);
+          domScript.removeEventListener('load', scriptLoaded, false);
+          cb && cb();
+      };
+      var domScript = document.createElement('script');
+      domScript.async = true;
+      domScript.src = moduleName;
+      domScript.addEventListener('load', scriptLoaded, false);
+      document.body.appendChild(domScript);
+    }
+
+    loadScript(debug ? 'cocos2d-js.js' : 'https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/cocos2d-js-min.55149.js', function () {
+      if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+        loadScript(debug ? 'physics.js' : 'physics-min.js', window.boot);
+      }
+      else {
+        window.boot();
+      }
+    });
+})();gameapi.init();
+</script>
+<script src="https://cdn.jsdelivr.net/gh/st39/sdk@main/api.js"></script>
+
+
+<script>gadgets.util.runOnLoadHandlers();</script><script>window.google.csi.tickDl();
+</script><div id="button" class="imgb imgb_vis" style="position: fixed; top: 10%; left: -100px; z-index: 10; display: none;"><a target="_blank" href="https://sites.google.com/view/classroom6x/" title="Play Unblocked Games on Classroom 6x"><img src="https://lh4.googleusercontent.com/lUEWrXMVEr4AdjKISyJahDRJ61bwfvHdpeYm86Djn5U8oCm9dI60NGXSBqad9HUvzTXgqlkosA_hWV-VuXPjzrkGvh3_kNSgYk8ySWzXnDpbBCBiooyBbU8oBy3YBZMDkW8RcRVmDuC0raoeqZBm8kBlqs6c5mdfkJeN2aE68lXS_lcOZ5_F7lIuM6qLVg" width="100" height="30" style="cursor:pointer;" alt="https://sites.google.com/view/classroom6x/"></a></div></body></html>

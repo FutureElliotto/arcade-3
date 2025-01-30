@@ -17,6 +17,7 @@
 - [RokCoder](https://scratch.mit.edu/users/RokCoder)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
 ## Change Log
+- 1/26/2025/9:00/PM added Frogger and Stickman Hook
 - 1/26/2025/3:21/PM added A Plumber For All Seasons
 - 1/25/2025/3:21/PM added Bitlife and 1v1.lol
 - 1/24/2025/8:05/PM added Fruit Ninja, Super Mario All Stars, And Basketball Stars

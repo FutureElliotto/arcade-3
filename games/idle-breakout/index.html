@@ -21,26 +21,27 @@
     <meta name="revisit-after" content="1 days" />
     <meta name="author" content="3kh0" />
 
-    <!-- Set the title bar of the page -->
     <title>Idle breakout | Arcade 3</title>
 
-    <!-- Set the background colour of the document -->
     <style>
       body {
-        height: 95vh;
+        height: 100vh; /* Changed from 95vh to 100vh */
         color: #cccccc;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden; /* Prevent scrolling */
       }
 
       canvas {
+        width: 100%; /* Make canvas responsive */
+        height: 100%; /* Make canvas responsive */
         image-rendering: pixelated;
         -webkit-interpolation-mode: nearest-neighbor;
         -ms-touch-action: none;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
 
       :-webkit-full-screen #canvas {
@@ -49,12 +50,11 @@
       }
 
       div.gm4html5 {
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
 
-      /* END - Login Dialog Box */
       :-webkit-full-screen {
         width: 100%;
         height: 100%;
@@ -64,13 +64,11 @@
   <script type="application/javascript" src="/js/main.js"></script>
   <body>
     <div align="center" class="gm4html5" id="gm4html5">
-      <!-- Create the canvas element the game draws to -->
-      <canvas id="canvas" width="1024" height="768">
+      <canvas id="canvas">
         <p>Your browser doesn't support HTML5 canvas.</p>
       </canvas>
     </div>
 
-    <!-- Run the game code -->
     <script type="text/javascript" src="html5game/Coding_BreakOut1.js"></script>
     <script>
       window.onload = GameMaker_Init;

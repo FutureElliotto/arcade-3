@@ -16,6 +16,12 @@
             background-repeat: no-repeat;
             background-size: cover; /* Optional: Ensures the image covers the entire background */
         }
+        #fullscreenBtn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -35,20 +41,24 @@
         <li><a aria-label="Settings" onclick="changeIframeContent('settings.html')">Settings</a></li>
     </ul>
 
- <!-- Iframe -->
+    <!-- Fullscreen Button -->
+    <button id="fullscreenBtn" onclick="toggleFullscreen()">Toggle Fullscreen</button>
+
+    <!-- Iframe -->
     <iframe id="Game" frameborder="0" allow="fullscreen" src="home.html"></iframe>
     <script>
         // Change the iframe content when a link is clicked
-function changeIframeContent(page) {
-    document.getElementById('Game').src = page;
+        function changeIframeContent(page) {
+            document.getElementById('Game').src = page;
 
-    // Set active class for navigation links
-    document.querySelectorAll('ul li a').forEach(link => {
-        link.classList.remove('active');
-    });
+            // Set active class for navigation links
+            document.querySelectorAll('ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
 
-    document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
-}
+            document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
+        }
+
         // Set initial page when document is loaded
         document.addEventListener("DOMContentLoaded", function() {
             var mainParameter = window.location.search;
@@ -57,6 +67,20 @@ function changeIframeContent(page) {
             document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
             document.getElementById('Game').src += ''; 
         });
+
+        // Function to toggle fullscreen mode
+        function toggleFullscreen() {
+            var iframe = document.getElementById('Game');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
     </script>
 
 </body>

@@ -10,11 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        html, body {
+            height: 100%; /* Ensure the body takes full height */
+            margin: 0; /* Remove default margin */
             background-image: url('../images/void.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
-            background-size: cover; /* Optional: Ensures the image covers the entire background */
+            background-size: cover; /* Ensures the image covers the entire background */
+        }
+        iframe {
+            width: 100%; /* Make iframe full width */
+            height: 100%; /* Make iframe full height */
+            border: none; /* Remove border */
         }
     </style>
 </head>
@@ -37,7 +44,7 @@
     </ul>
 
     <!-- Iframe -->
-    <iframe id="Game" frameborder="0" allow="fullscreen" src="home.html"></iframe>
+    <iframe id="Game" allow="fullscreen" src="home.html"></iframe>
     <script>
         // Change the iframe content when a link is clicked
         function changeIframeContent(page) {

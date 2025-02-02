@@ -16,6 +16,10 @@
             background-repeat: no-repeat;
             background-size: cover; /* Optional: Ensures the image covers the entire background */
         }
+        ::backdrop
+        {
+           background-image: url('../images/void.jpg');
+        }
     </style>
 </head>
 <body>
@@ -48,25 +52,31 @@
                 link.classList.remove('active');
             });
 
-            document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
+            document.querySelector(a[onclick*="${page}"]).classList.add('active');
         }
 
-function triggerFullscreen() {
-    const iframe = document.getElementById('Game');
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) { // Firefox
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) { // IE/Edge
-        iframe.msRequestFullscreen();
-    }
+        // Function to trigger fullscreen mode
+        function triggerFullscreen() {
+            const iframe = document.getElementById('Game');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
 
-    // Ensure the body background remains intact in fullscreen
-    document.body.style.backgroundAttachment = "scroll"; // Disable fixed attachment during fullscreen
-}
-
+        // Set initial page when document is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            var mainParameter = window.location.search;
+            var address = "home.html"; 
+            var combined = address + mainParameter;
+            document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
+            document.getElementById('Game').src += ''; 
+        });
     </script>
 
 </body>

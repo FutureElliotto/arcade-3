@@ -23,20 +23,20 @@
 
     <style>
       body {
-        height: 95vh;
+        height: 100vh; /* Set body height to 100% of the viewport height */
         color: #cccccc;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
 
       canvas {
         image-rendering: pixelated;
         -webkit-interpolation-mode: nearest-neighbor;
         -ms-touch-action: none;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
 
       :-webkit-full-screen #canvas {
@@ -45,9 +45,9 @@
       }
 
       div.gm4html5 {
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
+        margin: 0;
+        padding: 0;
+        border: 0;
       }
 
       :-webkit-full-screen {
@@ -59,7 +59,7 @@
   <script type="application/javascript" src="/js/main.js"></script>
   <body>
     <div align="center" class="gm4html5" id="gm4html5">
-      <canvas id="canvas" height="768">
+      <canvas id="canvas">
         <p>Your browser doesn't support HTML5 canvas.</p>
       </canvas>
     </div>
@@ -68,7 +68,7 @@
     <script>
       window.onload = function() {
         const canvas = document.getElementById('canvas');
-        const height = 100%; // Set desired height
+        const height = window.innerHeight; // Set height to the window's inner height
         const width = (4 / 3) * height; // Calculate width as 4/3 of height
         canvas.width = width;
         canvas.height = height;

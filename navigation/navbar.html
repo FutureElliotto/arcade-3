@@ -16,12 +16,6 @@
             background-repeat: no-repeat;
             background-size: cover; /* Optional: Ensures the image covers the entire background */
         }
-        #fullscreenBtn {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -39,10 +33,8 @@
         </li>
         <li><a aria-label="Apps" onclick="changeIframeContent('apps.html')">Apps</a></li>
         <li><a aria-label="Settings" onclick="changeIframeContent('settings.html')">Settings</a></li>
+        <li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
     </ul>
-
-    <!-- Fullscreen Button -->
-    <button id="fullscreenBtn" onclick="toggleFullscreen()">Toggle Fullscreen</button>
 
     <!-- Iframe -->
     <iframe id="Game" frameborder="0" allow="fullscreen" src="home.html"></iframe>
@@ -59,18 +51,9 @@
             document.querySelector(`a[onclick*="${page}"]`).classList.add('active');
         }
 
-        // Set initial page when document is loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            var mainParameter = window.location.search;
-            var address = "home.html"; 
-            var combined = address + mainParameter;
-            document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
-            document.getElementById('Game').src += ''; 
-        });
-
-        // Function to toggle fullscreen mode
-        function toggleFullscreen() {
-            var iframe = document.getElementById('Game');
+        // Function to trigger fullscreen mode
+        function triggerFullscreen() {
+            const iframe = document.getElementById('Game');
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
             } else if (iframe.mozRequestFullScreen) { // Firefox
@@ -81,6 +64,15 @@
                 iframe.msRequestFullscreen();
             }
         }
+
+        // Set initial page when document is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            var mainParameter = window.location.search;
+            var address = "home.html"; 
+            var combined = address + mainParameter;
+            document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
+            document.getElementById('Game').src += ''; 
+        });
     </script>
 
 </body>

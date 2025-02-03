@@ -43,7 +43,7 @@
     <!-- Iframe -->
     <iframe id="Game" frameborder="0" allow="fullscreen" src="home.html"></iframe>
     <script>
-        // Change the iframe content when a link is clicked
+       // Change the iframe content when a link is clicked
         function changeIframeContent(page) {
             document.getElementById('Game').src = page;
 
@@ -52,7 +52,11 @@
                 link.classList.remove('active');
             });
 
-            document.querySelector(a[onclick*="${page}"]).classList.add('active');
+            // Correctly select the anchor tag with the matching 'onclick' URL
+            const activeLink = document.querySelector(`a[onclick*="${page}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
         }
 
         // Function to trigger fullscreen mode
@@ -72,7 +76,7 @@
         // Set initial page when document is loaded
         document.addEventListener("DOMContentLoaded", function() {
             var mainParameter = window.location.search;
-            var address = "home.html"; 
+            var address = "https://futureelliotto.github.io/arcade-3/navigation/home.html"; 
             var combined = address + mainParameter;
             document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
             document.getElementById('Game').src += ''; 

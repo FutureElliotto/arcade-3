@@ -12,69 +12,76 @@
     <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-<script type="text/javascript">
-    function openGame(title, favicon) {
-        // Opening the window
-        const win = window.open("about:blank", "_blank");
+    <script type="text/javascript">
+        function openGame(title, favicon) {
+            // Opening the window
+            const win = window.open("about:blank", "_blank");
 
-        // Checking if the window was opened successfully
-        if (!win) {
-            alert("Popup blocked. Please allow popups.");
-            return;
+            // Checking if the window was opened successfully
+            if (!win) {
+                alert("Popup blocked. Please allow popups.");
+                return;
+            }
+
+            // Getting the document of the new window
+            const doc = win.document;
+
+            // Changing the title of the new window
+            doc.title = title;
+
+            // Adding styles to the new window
+            const style = doc.createElement("style");
+            style.innerHTML = `
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                html, body {
+                    height: 100%;
+                    margin: 0;
+                }
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+            `;
+            doc.head.appendChild(style);
+
+            // Adding an iframe to the new window
+            const iframe = doc.createElement('iframe');
+            iframe.src = "navbar.html";
+            iframe.allowFullscreen = true; // Allow fullscreen
+            doc.body.appendChild(iframe);
+
+            // Setting the favicon for the new tab
+            const link = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'icon';
+            link.href = favicon;
+            doc.head.appendChild(link);
         }
+        function changetheme(command) {
+            window.parent.postMessage('command', '*');
+        }
+    </script>
+</head>
+<body>
+    <select id="ddl" name="ddl" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('favicon'));">
+        <option disabled selected value> -- Cloak -- </option>
+        <option title="Arcade 3" favicon="../images/logo.png">None</option>
+        <option title="Home" favicon="../images/classroom.png">Google Classroom</option>
+        <option title="My Apps" favicon="../images/classlink.ico">Classlink</option>
+        <option title="IXL | Dashboard" favicon="../images/ixl.png">IXL</option>
+        <option title="Inbox" favicon="../images/gmail.ico">Gmail</option>
+    </select>
 
-        // Getting the document of the new window
-        const doc = win.document;
-
-        // Changing the title of the new window
-        doc.title = title;
-
-        // Adding styles to the new window
-        const style = doc.createElement("style");
-        style.innerHTML = `
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            html, body {
-                height: 100%;
-                margin: 0;
-            }
-            iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-        `;
-        doc.head.appendChild(style);
-
-        // Adding an iframe to the new window
-        const iframe = doc.createElement('iframe');
-        iframe.src = "navbar.html";
-        iframe.allowFullscreen = true; // Allow fullscreen
-        doc.body.appendChild(iframe);
-
-        // Setting the favicon for the new tab
-        const link = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
-        link.type = 'image/x-icon';
-        link.rel = 'icon';
-        link.href = favicon;
-        doc.head.appendChild(link);
-    }
-</script>
-
-<select id="ddl" name="ddl" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('favicon'));">
-  <option disabled selected value> -- Cloak -- </option>
-  <option title="Arcade 3" favicon="../images/logo.png">None</option>
-  <option title="Home" favicon="../images/classroom.png">Google Classroom</option>
-  <option title="My Apps" favicon="../images/classlink.ico">Classlink</option>
-  <option title="IXL | Dashboard" favicon="../images/ixl.png">IXL</option>
-  <option title="Inbox" favicon="../images/gmail.ico">Gmail</option>
-</select>
-
-</body>
-</html>
-
+    <select id="ddl" name="ddl" onchange="changetheme(this.options[this.selectedIndex].getAttribute('command'));">
+        <option disabled selected value> -- Background -- </option>
+        <option command="set background void">Void(default)</option>
+        <option command="set background mountain">Mountain</option>
+        <option command="set background arcade 1">Arcade 1</option>
+    </select>
 </body>
 </html>

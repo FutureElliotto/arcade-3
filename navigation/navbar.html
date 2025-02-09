@@ -16,8 +16,7 @@
             background-repeat: no-repeat;
             background-size: cover; /* Optional: Ensures the image covers the entire background */
         }
-        ::backdrop
-        {
+        ::backdrop {
            background-image: url('../images/void.jpg');
         }
     </style>
@@ -36,14 +35,14 @@
             </div>
         </li>
         <li><a aria-label="Apps" onclick="changeIframeContent('apps.html')">Apps</a></li>
-        <li><a aria-label="Settings" onclick="changeIframeContent('settings.html')">Settings</a></li>
+        <li><a aria-label="Settings" onclick="changeIframeContent('https://futureelliotto.github.io/arcade-3/navigation/settings.html')">Settings</a></li>
         <li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
     </ul>
 
     <!-- Iframe -->
     <iframe id="Game" frameborder="0" allow="fullscreen" src="home.html"></iframe>
     <script>
-       // Change the iframe content when a link is clicked
+        // Change the iframe content when a link is clicked
         function changeIframeContent(page) {
             document.getElementById('Game').src = page;
 
@@ -81,6 +80,22 @@
             document.getElementById('Game').setAttribute("src", combined); // Set iframe source dynamically if needed
             document.getElementById('Game').src += ''; 
         });
+
+        window.parent.postMessage("Hello from iframe", "*");
+
+        // In the parent window
+        window.addEventListener("message", function(event) {
+            const bodyStyle = document.body.style;
+            if (event.data === "set background void") {
+                bodyStyle.backgroundImage = "url('../images/void.jpg')";
+            }
+            if (event.data === "set background mountain") {
+                bodyStyle.backgroundImage = "url('../images/mountain.jpg')";
+            }
+            if (event.data === "set background arcade 1") {
+                bodyStyle.backgroundImage = "url('../images/vsimple-header-blended.png.jpg')";
+            }
+        }, false);    
     </script>
 
 </body>

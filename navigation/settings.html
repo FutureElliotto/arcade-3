@@ -68,7 +68,7 @@
     </script>
 </head>
 <body>
-    <select id="ddl" name="ddl" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('favicon'));">
+    <select id="gameDropdown" name="gameDropdown" onchange="openGame(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('favicon'));">
         <option disabled selected value> -- Cloak -- </option>
         <option title="Arcade 3" favicon="../images/logo.png">None</option>
         <option title="Home" favicon="../images/classroom.png">Google Classroom</option>
@@ -77,7 +77,7 @@
         <option title="Inbox" favicon="../images/gmail.ico">Gmail</option>
     </select>
 
-    <select id="ddl" name="ddl" onchange="changetheme(this.options[this.selectedIndex].getAttribute('command'));">
+    <select id="themeDropdown" name="themeDropdown" onchange="changetheme(this.options[this.selectedIndex].getAttribute('command'));">
         <option disabled selected value> -- Background -- </option>
         <option command="set background void">Void(default)</option>
         <option command="set background mountain">Mountain</option>

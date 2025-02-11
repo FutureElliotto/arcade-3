@@ -16,6 +16,7 @@
 - [quadrupleslap](https://scratch.mit.edu/users/quadrupleslap)
 - [RokCoder](https://scratch.mit.edu/users/RokCoder)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
+- [TimMcCool](https://scratch.mit.edu/users/TimMcCool)
 ## Change Log
 - 2/08/2025/9:22/PM added Soccer Bros and Paper.io
 - 2/08/2025/2:57/PM added Yohoho.io

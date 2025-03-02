@@ -69,13 +69,11 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Verdana", sans-serif, color-emoji;
-  background: #fff;
   color: #333;
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background: #000;
-    color: #eee;
+b    color: #eee;
   }
 }
 
@@ -108,12 +106,10 @@ article > footer {
 }
 
 .begend {
-  background-color: #f9faff;
   border-bottom: 1px solid #073cd6;
 }
 @media (prefers-color-scheme: dark) {
   .begend {
-    background-color: #080c1e;
     border-bottom: 1px solid #6c9efd;
   }
 }
@@ -147,7 +143,7 @@ article > footer {
 }
 @media (prefers-color-scheme: dark) {
   .domain {
-    background-color: #663300;
+    
   }
 }
 
@@ -315,7 +311,6 @@ h4 {
   text-align: center;
   color: #fff;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 .headerblack a {
   text-decoration: none;
@@ -477,7 +472,6 @@ blockquote {
   margin: 1em;
   border-radius: 10px;
   color: #545454;
-  background-color: #dcdcdc;
   font-family: Georgia, Cambria, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif, color-emoji;
   font-style: italic;
   transform: rotate(-1deg);
@@ -546,12 +540,12 @@ img {
 
 ::-moz-selection {
   color: #000;
-  background: #eee;
+
 }
 
 ::selection {
   color: #000;
-  background: #eee;
+
 }
 
 .embed-container {
